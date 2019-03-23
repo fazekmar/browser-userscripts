@@ -5,7 +5,7 @@
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Lecsereli a felhasznalo(k) / rang(ok) szovegezeset a Prohardver lapcsalad foruman.
-// @updateURL    https://raw.githubusercontent.com/fazekmar/browser-userscripts/master/prohardver/rangvalaszto.js
+// @updateURL    https://raw.githubusercontent.com/fazekmar/browser-userscripts/master/prohardver/rangvalaszto.user.js
 // @include      /.*fototrend.hu/(tema|privat|bejegyzes).*$/
 // @include      /.*prohardver.hu/(tema|privat|bejegyzes).*$/
 // @include      /.*mobilarena.hu/(tema|privat|bejegyzes).*$/

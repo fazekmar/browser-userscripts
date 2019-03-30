@@ -53,9 +53,11 @@
         try {
             for (let [index, par] of Object.entries(msg.children)) {
                 for (let [index, pic] of Object.entries(par.children)) {
+                    let ar = null;
+                    (pic.children.length > 0) ? ar = pic.children[1] : ar = pic;
                     for (let [current, newImg] of Object.entries(config)) {
-                        if (pic.alt === current) {
-                            pic.src = newImg;
+                        if (ar.alt === current) {
+                            ar.src = newImg;
                         };
                     };
                 };

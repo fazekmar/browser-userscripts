@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RangValaszto
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1553282311
+// @version      0.1553952101
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Lecsereli a felhasznalo(k) / rang(ok) szovegezeset a Prohardver lapcsalad foruman.

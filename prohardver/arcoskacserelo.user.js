@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Arcoska cserelo
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1553282311
+// @version      0.1553954150
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Lecsereli az arcoskakat a Prohardver lapcsalad foruman.

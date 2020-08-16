@@ -15,3 +15,7 @@ Elrejti a felhasznalok alairasait a Prohardver lapcsalad foruman.
 ### Nyomtatobarat atiranyitas - [Telepites](https://raw.githubusercontent.com/fazekmar/browser-userscripts/master/prohardver/nyomtatobarat-atiranyitas.user.js)
 
 Amikor elerheto nyomtatobarat verzio akkor automatikusan atiranyit ra.
+
+### Felhasznalo elrejto - [Telepites](https://raw.githubusercontent.com/fazekmar/browser-userscripts/master/prohardver/felhasznalo-elrejto.user.js)
+
+Elrejti a kivalasztott felhasznalo(k) hozzaszolasainak tartalmat. Az uzenet fejlecere kattintva megjelenitheto a hozzaszolas.

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hozzaszolas rovidito
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1597602424
+// @version      0.1597606437
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  A beallitott karakterszamra levagja a hozzaszolasok tartalmat, kinyitas gomb segitsegevel megjelenitheto a teljes tartalom
@@ -61,6 +61,7 @@ const createButton = (onClickFunction) => {
 (function () {
   [...document.getElementsByClassName("card-body")]
     .filter((card) =>
+      card.innerHTML.indexOf(`class="msg-form"`) === -1 &&
       card.parentElement &&
       card.parentElement.innerText.indexOf("Téma összefoglaló") === -1 &&
       card.children[1] &&

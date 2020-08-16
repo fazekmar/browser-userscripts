@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Olvasott tema elrejto
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1597594119
+// @version      0.1597607880
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Elrejti azokat a temakat ahova nem erkezett uj hozzaszolas a Kedvencek/Itt szoltam hozza listakbol. A fejlecekre kattintva ujra elo lehet hozni/el lehet rejteni oket
@@ -24,6 +24,7 @@ const placeOnClickToHeader = (userThreadList) => {
       header.innerText.indexOf("Itt szóltam hozzá") !== -1
     ) {
       header.onclick = () => onClick(header, userThreadList, false);
+      header.style.cursor = "pointer";
     }
   });
 };

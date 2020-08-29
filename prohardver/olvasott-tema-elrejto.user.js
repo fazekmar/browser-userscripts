@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         Olvasott tema elrejto
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1597607880
+// @version      0.1598688166
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Elrejti azokat a temakat ahova nem erkezett uj hozzaszolas a Kedvencek/Itt szoltam hozza listakbol. A fejlecekre kattintva ujra elo lehet hozni/el lehet rejteni oket
 // @updateURL    https://raw.githubusercontent.com/fazekmar/browser-userscripts/master/prohardver/olvasott-tema-elrejto.user.js
-// @include      /.*fototrend.hu/(tema|privat).*$/
-// @include      /.*prohardver.hu/(tema|privat).*$/
-// @include      /.*mobilarena.hu/(tema|privat).*$/
-// @include      /.*gamepod.hu/(tema|privat).*$/
-// @include      /.*itcafe.hu/(tema|privat).*$/
+// @include      /.*fototrend.hu/(forum|tema|privat|tag).*$/
+// @include      /.*prohardver.hu/(forum|tema|privat|tag).*$/
+// @include      /.*mobilarena.hu/(forum|tema|privat|tag).*$/
+// @include      /.*gamepod.hu/(forum|tema|privat|tag).*$/
+// @include      /.*itcafe.hu/(forum|tema|privat|tag).*$/
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==

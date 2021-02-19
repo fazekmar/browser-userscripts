@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Felhasznalo elrejto
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1602412571
+// @version      0.1613771963
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Elrejti a kivalasztott felhasznalo(k) hozzaszolasainak tartalmat. Az uzenet fejlecere kattintva megjelenitheto a hozzaszolas.
@@ -26,6 +26,7 @@
     "Nev1", // Fejlec megjelenik
     { nick: "Nev2", full: false }, // Fejlec megjelenik
     { nick: "Nev3", full: true }, // Teljes rejtes
+    { nick: "Nev4", full: true, reply: true }, // Teljes rejtes a valaszokkal egyutt
   ];
   // Megprobalja a kovetkezo olvasatlan uzenetre navigalni az oldalt ha az aktualis elrejtesre kerul
   const scrollFix = true; // true/false
@@ -35,8 +36,10 @@
     config.forEach((user) => {
       const nick = user.nick ? user.nick : user;
       const full = user.full ? user.full : false;
+      const reply = user.reply ? user.reply : false;
       try {
-        if (card.children[1].children[0].children[1].innerText === nick) {
+        if (card.children[0].children[0].children[0].innerText.indexOf(nick) !== -1
+            || reply && card.children[0].children[0].children[1].innerText.indexOf(nick) !== -1) {
           if (full) {
             card.style.display = "none";
           } else {
@@ -69,10 +72,10 @@
         [...ta.parentElement.children].some((c) =>
           c.className === "card" && c.style.display !== "none"
         )
-      ).map((ta) => ta.id).sort()[0];
+      ).map((ta) => parseInt(ta.id.split("msg").slice(-1)[0])).sort()[0];
 
     if (hashId) {
-      window.location.hash = hashId;
+      window.location.hash = `msg${hashId}`;
     }
   }
 })();

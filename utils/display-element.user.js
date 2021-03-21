@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DisplayElement
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1616176831
+// @version      0.1616342137
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Set element display property and optionally fading it
@@ -54,6 +54,11 @@ function displayElement(
         element.style.opacity = opacity;
       }, intervalSpeed);
     } else {
+      // Reset opacity setting if previously set
+      if (isDisplay && element.style.opacity && element.style.opacity !== 1) {
+        element.style.opacity = 1;
+      }
+
       element.style.display = isDisplay ? display : "none";
     }
   } catch (e) {

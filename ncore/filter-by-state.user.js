@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filter torrents by state
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1616187776
+// @version      0.1616338189
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Create filter buttons for the activity/hit'n'run table
@@ -16,7 +16,7 @@
 
 const resetDisplay = () => {
   [...document.getElementsByClassName("hnr_torrents")].forEach((line) => {
-    displayElement(line, true, "");
+    displayElement(line, true);
   });
 };
 

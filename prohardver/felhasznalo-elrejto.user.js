@@ -12,8 +12,11 @@
 // @include      /.*gamepod.hu/(tema).*$/
 // @include      /.*itcafe.hu/(tema).*$/
 // @run-at       document-end
+// @require      https://raw.githubusercontent.com/fazekmar/browser-userscripts/master/utils/display-element.user.js
 // @grant        none
 // ==/UserScript==
+
+/* globals displayElement */
 
 (function () {
   /* CONFIG BEGIN
@@ -39,14 +42,14 @@
       const reply = user.reply ? user.reply : false;
       try {
         if (card.children[0].children[0].children[0].innerText.indexOf(nick) !== -1
-            || reply && card.children[0].children[0].children[1].innerText.indexOf(nick) !== -1) {
+          || reply && card.children[0].children[0].children[1].innerText.indexOf(nick) !== -1) {
           if (full) {
-            card.style.display = "none";
+            displayElement(card, false);
           } else {
             const msg = card.children[1];
-            msg.style.display = "none";
+            displayElement(msg, false);
             card.children[0].onclick = () => {
-              msg.style.display = "flex";
+              displayElement(msg, true, "flex");
               card.children[0].onclick = "";
             };
           }

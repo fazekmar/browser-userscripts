@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         onclick toggle functions
 // @namespace    https://github.com/fazekmar/browser-userscripts
-// @version      0.1616344624
+// @version      0.1616536786
 // @author       https://github.com/fazekmar
 // @license      GPL-3.0; https://github.com/fazekmar/browser-userscripts/blob/master/LICENSE
 // @description  Toggle element(s) display state

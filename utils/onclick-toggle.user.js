@@ -37,3 +37,29 @@ const toggleElement = (watch, data, state, displayOptions) => {
 
   watch.onclick = () => toggleElement(watch, data, !state, display);
 };
+
+/**
+ * Toggle elements display state with fade (default enabled)
+ *
+ * @param {HTMLElement} watch - Place onclick funtion to this element
+ * @param {HTMLElement[]} data - Set display state for all element in the list
+ * @param {boolean} state - New display state
+ * @param {Object} [displayOptions] - displayElement extra parameters
+ *
+ * @example
+ * const header = document.getElementById('header');
+ * const data = document.querySelectorAll("[id^=data]")
+ * header.onclick = () => toggleElements(header, data, false);
+ * @example
+ * header.onclick = () => toggleElements(header, data, false, { display: "block", intervalSpeed: 5 });
+ */
+const toggleElements = (watch, data, state, displayOptions) => {
+  const display = {
+    fade: true,
+    ...displayOptions,
+  };
+
+  data.forEach((e) => displayElement(e, state, display.display, display.fade, display.intervalSpeed, display.rate));
+
+  watch.onclick = () => toggleElements(watch, data, !state, display);
+};
